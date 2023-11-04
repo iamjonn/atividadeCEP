@@ -1,5 +1,7 @@
+@import url('');
+
 body {
-  background-color: #80deea;
+  background-image: url('https://th.bing.com/th/id/OIG.oy4Vr9NVb1Eaf2VAQbTa?pid=ImgGn');
   font-family: sans-serif;
   min-height: 100vh;
   display: flex;
@@ -8,7 +10,7 @@ body {
 }
 
 main {
-  background-color: #fff;
+  background-color: transparent;
   padding: 30px;
   width: 40%;
 }
@@ -21,7 +23,7 @@ main form {
 
 main form input[type=text],
 main form #cepError {
-  width: 50%;
+  width: 60%;
 }
 
 main form input {
@@ -46,4 +48,10 @@ main form input {
 main form #cepError {
   color: rgba(255, 0, 0, 0.68);
   margin-top: -5px;
+}
+
+h2{
+  font-size: 40px;
+  color:white;
+  font-family: 'Mooli', sans-serif;
 }
