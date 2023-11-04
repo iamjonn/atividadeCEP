@@ -12,7 +12,10 @@
   <main>
     <form action="">
       <h2>Seu endereço</h2>
-      <input type="text" id="cep" placeholder="CEP"> <!-- 58015-435 -->
+      <div class="campo-container">
+        <input type="text" id="cep" placeholder="CEP">
+        <img src="/media/abobora-unscreen.gif" alt="loading" class="hidden" id="loading"><!-- CEP PARA MOSTRAR GIF 58068-000-->
+      </div>
       <div id="cepError" class="hidden">O CEP informado é invalido.</div>
       <input type="text" id="street" placeholder="Rua">
       <input type="text" id="number" placeholder="Número">
