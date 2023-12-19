@@ -26,7 +26,17 @@ function carregarInfoCep(cep) {
   campoCarregamento.classList.toggle('hidden')
   campoFormulario.classList.toggle('loading')
   let url = `https://viacep.com.br/ws/${cep}/json/`
-  fetch(url)
+
+  // Cria uma nova promessa que é rejeitada após 5 segundos
+  const timeout = new Promise((resolve, reject) => {
+    const id = setTimeout(() => {
+      clearTimeout(id)
+      reject('Tempo limite da solicitação excedido')
+    }, 5000)
+  })
+
+  // Faz a requisição fetch e a promessa de tempo limite competirem entre si
+  Promise.race([fetch(url), timeout])
     .then(res => res.json())
     .then(infoCep => {
       if(infoCep.erro) {
